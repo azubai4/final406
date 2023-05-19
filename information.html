@@ -1,0 +1,34 @@
+<!-- This code was adopted from Professor Wang's Github code example-->
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+  <h1 class="text-center my-5" style="font-weight: bold;">Customer Loyalty Members</h1>
+
+  <table class="table table-striped table-bordered">
+     <thead class="bg-success">
+        <td>Customer ID</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Last Purchase</td>
+        <td>First Purchase</td>
+        <td>Phone Number</td>
+     </thead>
+
+     {% for row in rows %}
+     <tr class="bg-info">
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td> {{row[3]}}</td>
+        <td>{{row[4]}}</td>
+        <td>{{row[5]}}</td>
+     </tr>
+     {% endfor %}
+  </table>
+
+  <div class="text-center">
+    <a href="/" class="btn btn-primary mt-3">Go back to home page</a>
+  </div>
+
+{% endblock %}
+
